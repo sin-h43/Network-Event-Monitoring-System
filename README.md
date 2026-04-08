@@ -135,7 +135,7 @@ cn/
 ├── client_udp.py          # Distributed edge node client
 ├── README.md              # This file
 └── screenshots/           # Performance graphs & demo output
----
+---*
 
 🔒 Security Note
 - Shared 32-byte AES key (for demo only)
