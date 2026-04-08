@@ -65,9 +65,14 @@ Edge Node (Client)                          Central Monitoring Server
 ## 📦 Prerequisites
 1. Python 3.8 or higher
 2. Install required package:
-   ```bash
+```bash
    pip install cryptography
    ```
+3. For performance testing:
+```bash
+   pip install psutil
+   ```
+
 ---
 
 ## 🚀 How to Run
@@ -109,6 +114,32 @@ Node 2 → Sent critical event: threshold
 Node 2 → Sent critical event: failure
 ...
 ```
+### 3. Run Performance Test (Terminal 5)
+   ```bash
+   python performance_test.py
+   ```
+**Expected Performance Output:**
+```
+====================================
+📊 PERFORMANCE EVALUATION
+====================================
+📊 Throughput: 218.45 events/sec
+📊 Packet loss rate: 14.80%
+⏱️  Average Latency: 4.20 ms
+====================================
+```
+
+### 4. Run Error Handling Demo
+   ```bash
+   python demo_error_handling.py
+   ```
+**Expected Server Error Output:**
+```
+❌ Error processing packet from (127.0.0.1, 54321): Invalid padding
+❌ Error processing packet from (127.0.0.1, 54322): 'event_type'
+❌ Error processing packet from (127.0.0.1, 54323): Expecting value
+```
+
 
 **Press `Ctrl + C` in any terminal to stop gracefully.**
 
@@ -132,13 +163,11 @@ Node 2 → Sent critical event: failure
 cn/
 
 ├── encryption.py          # AES-256-CBC implementation (shared key)
-
 ├── server_udp.py          # Central monitoring server
-
 ├── client_udp.py          # Distributed edge node client
-
+├── performance_test.py    # Automated benchmark script
+├── demo_error_handling.py # Error injection tester
 ├── README.md              # This file
-
 └── screenshots/           # Performance graphs & demo output
 ---*
 
