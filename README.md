@@ -162,13 +162,19 @@ Node 2 → Sent critical event: failure
 📁 Project File Structure
 cn/
 
-├── encryption.py          # AES-256-CBC implementation (shared key)
-├── server_udp.py          # Central monitoring server
-├── client_udp.py          # Distributed edge node client
-├── performance_test.py    # Automated benchmark script
-├── demo_error_handling.py # Error injection tester
-├── README.md              # This file
 └── screenshots/           # Performance graphs & demo output
+
+├── README.md              # This file
+
+├── client_udp.py          # Distributed edge node client
+
+├── demo_error_handling.py # Error injection tester
+
+├── encryption.py          # AES-256-CBC implementation (shared key)
+
+├── performance_test.py    # Automated benchmark script
+
+├── server_udp.py          # Central monitoring server
 ---*
 
 🔒 Security Note
