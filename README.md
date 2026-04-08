@@ -130,10 +130,15 @@ Node 2 → Sent critical event: failure
 
 📁 Project File Structure
 cn/
+
 ├── encryption.py          # AES-256-CBC implementation (shared key)
+
 ├── server_udp.py          # Central monitoring server
+
 ├── client_udp.py          # Distributed edge node client
+
 ├── README.md              # This file
+
 └── screenshots/           # Performance graphs & demo output
 ---*
 
